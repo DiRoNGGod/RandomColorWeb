@@ -47,3 +47,110 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ~-----------------------------------------------------------------------------*/
 
+.wrapper {   /* * Оболочка всей страницы */
+	overflow: hidden;
+
+	min-height: 100%;
+}
+
+.container {   /* * Ограничивающий контейнер */
+	max-width: 1480px;
+
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.content {   /* * Контент блока */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	text-align: center;
+
+	height: 100vh;
+
+	position: relative;
+}
+
+.title {
+	font-size: 48px;
+	line-height: 1.4;
+
+	animation: title-color 10s linear infinite alternate;
+}
+.title span {
+	display: inline-block;
+}
+.title span:first-child {   /* * Первая надпись заголовка */
+	font-size: 72px;
+	line-height: 1.4;
+	letter-spacing: 2px;
+}
+
+@keyframes title-color {   /* * Анимация для цвета текста */
+	0% {
+		color: purple;
+	}
+	25% {
+		color: green;
+	}
+	50% {
+		color: blue;
+	}
+	75% {
+		color: red;
+	}
+	100% {
+		color: pink;
+	}
+}
+
+.info {   /* * Стили для справки о цвете */
+	position: absolute;
+
+	top: 40px;
+	left: 10px;
+
+	font-size: 28px;
+}
+
+.button {
+	width: 40%;
+	height: 60px;
+
+	padding: 0 5px;
+
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	transform: translate(-50%);
+
+	text-align: center;
+	line-height: 60px;
+
+	font-size: 36px;
+
+	background-color: rgb(5, 98, 160);
+
+	border-radius: 10px;
+
+	transition: 0.2s linear;
+}
+.button:hover {
+	background-color: rgb(3, 62, 117);
+}
+
+@media (max-width: 900px) {
+	.title {
+		font-size: 20px;
+	}
+	.title span:first-child {
+		font-size: 36px;
+	}
+	.button {
+		font-size: 20px;
+
+		width: 250px;
+	}
+}
+
